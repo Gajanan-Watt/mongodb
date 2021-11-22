@@ -1,0 +1,25 @@
+show dbs
+use test
+db.createCollection('users')
+show dbs
+db.users.insert({"first_name": "Gajanan", "last_name": "Wattamwar", "email": "wattamwargaj@gmail.com", "gender": "male", "ip_address": "8948-7384-3747", "age": "24"})
+db.users.find({})
+db.users.insertMany([{"first_name": "nrupul", "last_name": "dev", "email": "nrupul@gmail.com", "gender": "male", "ip_address": "5654-9748-5483", "age": "38"},{"first_name": "meera", "last_name": "mendhe", "email": "meera@gmail.com", "gender": "female", "ip_address": "9014-0348-6743", "age": "27"},{"first_name": "aman", "last_name": "vatsa", "email": "aman@gmail.com", "gender": "male", "ip_address": "6974-1238-3483", "age": "27"},{"first_name": "ankush", "last_name": "chimnani", "email": "ankush@gmail.com", "gender": "male", "ip_address": "9784-0948-0883", "age": "25"},{"first_name": "dhawal", "last_name": "chheda", "email": "dhawal@gmail.com", "gender": "male", "ip_address": "4574-0848-7903", "age": "30"}])
+db.users.find({})
+db.users.insertMany([{"first_name": "seema", "last_name": "mokashi", "email": "seema@gmail.com", "gender": "female", "ip_address": "0054-9148-5993", "age": "27"}, {"first_name": "pavan", "last_name": "thota", "email": "pavan@gmail.com", "gender": "male", "ip_address": "5554-7748-5583", "age": "26"},{"first_name": "shivam", "last_name": "singh", "email": "shivam@gmail.com", "gender": "male", "ip_address": "1154-9998-0083", "age": "26"}])
+db.users.find({})
+db.users.find({"first_name": "Gajanan"})
+db.users.updateMany({"first_name": "prateek"},{$set: {"company": "MASAI"}})
+db.users.updateMany({"first_name": "nrupul"},{$set: {"company": "MASAI"}})
+db.users.updateMany({"first_name": "yogesh"},{$set: {"company": "MASAI"}})
+db.users.find({})
+db.users.remove({"first_name": "meera"})
+db.users.find({})
+db.users.remove({"company": "MASAI"}, 1)
+db.users.find({})
+db.users.remove({"company": "MASAI"}) 
+db.users.find({})
+db.dropDatabase()
+show dbs
+
+
